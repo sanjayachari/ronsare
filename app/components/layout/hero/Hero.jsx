@@ -31,6 +31,9 @@ import React, { useContext } from "react";
 import Right from "./right/Right";
 import Banner from "./left/banner/Banner";
 import About from "./left/about/About";
+import ChildrenNavbar from "./left/nav/ChildrenNavbar";
+import Tickets from "./left/tickets/Tickets";
+import Speaker from "./left/speakers/Speaker";
 
 const Hero = () => {
   const { data } = useContext(Context);
@@ -41,12 +44,14 @@ const Hero = () => {
         <Banner />
       </div>
 
-      <div className="md:fixed top-[85px] 2xl:top-[100px] right-[100px]  p-2 md:p-0 md:w-[400px] ">
+      <div className="md:fixed top-[85px] 2xl:top-[100px] md:right-[30px] xl:right-[70px] 2xl:right-[100px]  p-2 md:p-0 md:w-[400px] ">
         <Right />
       </div>
-      <div className="pl:[150px] xl:pl-[200px] w-[60%]">
-
-      {/* <About /> */}
+      <div className="xl:pl-[100px] 2xl:pl-[200px] w-full md:w-[60%] md:p-0 p-2">
+      <ChildrenNavbar/>
+      <About />
+      {/* <Tickets/> */}
+      <Speaker/>
      
       </div>
     </div>
