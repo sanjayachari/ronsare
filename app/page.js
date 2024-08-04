@@ -3,7 +3,7 @@ import React, { useContext, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Atom } from "react-loading-indicators";
 import { Context, ContextProvider } from "./contexts/Context.js";
-const page = () => {
+const Page = () => {
   const router = useRouter();
   const { loading } = useContext(Context);
   useEffect(() => {
@@ -23,4 +23,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -4,7 +4,7 @@ import Navbar from "../components/navbar/Navbar";
 import Hero from "../components/layout/hero/Hero";
 import { Context } from "../contexts/Context";
 import { Atom } from "react-loading-indicators";
-const page = () => {
+const Page = () => {
   const { loading } = useContext(Context);
 
   return (
@@ -23,4 +23,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
