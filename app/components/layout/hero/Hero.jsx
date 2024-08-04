@@ -41,7 +41,7 @@ const Hero = () => {
         <Banner />
       </div>
 
-      <div className="md:fixed top-[100px] right-[100px]  p-2 md:p-0 md:w-[400px] ">
+      <div className="md:fixed top-[85px] 2xl:top-[100px] right-[100px]  p-2 md:p-0 md:w-[400px] ">
         <Right />
       </div>
       <div className="pl:[150px] xl:pl-[200px] w-[60%]">

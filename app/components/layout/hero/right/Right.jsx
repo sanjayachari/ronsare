@@ -16,7 +16,7 @@ const Right = () => {
   }, [dropdown]); // Re-run this effect when `dropdown` changes
 
   return (
-    <div className="rounded-md shadow-2xl border w-full bg-white my-10 pb-5 h-full md:h-[495px] overflow-auto scroll-auto hide-scrollbar">
+    <div className="rounded-md shadow-2xl border w-full bg-white my-10 pb-5 h-full xl:[380px] 2xl:h-[495px] overflow-auto scroll-auto hide-scrollbar">
       <div>
         <div className="">
           <Image
