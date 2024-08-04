@@ -39,7 +39,7 @@ import Sponsor from "./left/eventSponsor/Sponsor";
 
 const Hero = () => {
   const { data } = useContext(Context);
-  console.log(data);
+  // console.log(data);
   return (
     <div className="relative">
       <div className="h-[130px] md:h-[400px] flex justify-start bg-[#572148] gap-5 w-full ">

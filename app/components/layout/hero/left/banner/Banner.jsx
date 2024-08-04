@@ -15,7 +15,7 @@ const Banner = () => {
     setEventEndDate,
   } = useContext(Context);
   
-  console.log(data);
+  // console.log(data);
   return (
     <div className="pl-[20px] md:w-[40%] xl:w-[50%] 2xl:w-[60%] flex flex-col justify-center items-start md:pl-[100px] xl:pl-[100px] 2xl:pl-[200px] text-white">
       <div className="font-bold text-[20px] md:text-[35px] ">{data?.name}</div>

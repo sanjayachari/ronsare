@@ -5,7 +5,7 @@ import styles from "../../../../../globals.css";
 
 const Workshop = () => {
   const { data } = useContext(Context);
-  console.log(data);
+  // console.log(data);
   const workshopData = [
     { id: 0, name: "How to make more money" ,time : "Jun 11th, 2024 at 9:00 AM" },
     { id: 1, name: "How to make video" ,time : "Jul 13th, 2024 at 10:00 AM" },
