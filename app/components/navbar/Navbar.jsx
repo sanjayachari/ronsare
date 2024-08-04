@@ -51,7 +51,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="w-full shadow-md sticky top-0 z-10">
+    <div className="w-full shadow-md sticky top-0 z-20">
       <div className="relative">
         {showAlert && (
           <div className="h-[50px] w-full bg-[#572148] flex items-center justify-start p-2 md:justify-center text-white btn-shine md:text-[16px] text-[13px]">

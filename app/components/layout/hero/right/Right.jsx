@@ -16,17 +16,17 @@ const Right = () => {
   }, [dropdown]); // Re-run this effect when `dropdown` changes
 
   return (
-    <div className="rounded-md shadow-2xl border w-full bg-white my-10 pb-5 h-full xl:h-[450px] 2xl:h-[495px] overflow-auto scroll-auto hide-scrollbar">
+    <div className="z-40 rounded-md shadow-2xl border w-full bg-white my-10 pb-5 h-full xl:h-[450px] 2xl:h-[495px] overflow-auto scroll-auto hide-scrollbar">
       <div>
         <div className="">
-        <div className="relative h-[150px] 2xl:h-[200px] w-full">
-  <Image
-    src="https://dev-media.konfhub.com/default-event-posters/default-event-posters-image5.jpg"
-    layout="fill"
-    objectFit="cover" // This determines how the image fills the container
-    alt="Description of the image"
-  />
-</div>
+          <div className="relative h-[150px] 2xl:h-[200px] w-full">
+            <Image
+              src="https://dev-media.konfhub.com/default-event-posters/default-event-posters-image5.jpg"
+              layout="fill"
+              objectFit="cover" // This determines how the image fills the container
+              alt="Host"
+            />
+          </div>
 
           <div className="px-3 py-1">
             <div className="flex gap-5">
@@ -63,7 +63,7 @@ const Right = () => {
                 {" "}
                 <img
                   src="https://dev-media.konfhub.com/past_events/2024/June/09/1717977208703-f9c5c15d-b0f1-4aeb-a492-3464c2c97afd.jpg"
-                  className="h-[30px] w=[30px] rounded-full"
+                  className="h-[30px] w-[30px] rounded-full"
                   alt=""
                 />
                 Manjunath R
