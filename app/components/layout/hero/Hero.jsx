@@ -45,17 +45,16 @@ const Hero = () => {
       <div className="h-[130px] md:h-[400px] flex justify-start bg-[#572148] gap-5 w-full ">
         <Banner />
       </div>
-
       <div className="z-20 md:fixed top-[85px] 2xl:top-[100px] md:right-[60px] xl:right-[70px] 2xl:right-[100px]  p-2 md:p-0 md:w-[400px] ">
         <Right />
       </div>
       <div className="xl:pl-[100px] 2xl:pl-[200px] w-full md:w-[60%] md:p-0 p-2">
-      <ChildrenNavbar/>
-      <About />
-      {/* <Tickets/> */}
-      <Speaker/>
-     <Workshop/>
-     <Sponsor/>
+        <ChildrenNavbar />
+        <About />
+        <Tickets />
+        <Speaker />
+        <Workshop />
+        <Sponsor />
       </div>
     </div>
   );

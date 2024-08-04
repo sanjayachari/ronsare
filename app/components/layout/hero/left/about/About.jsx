@@ -5,7 +5,7 @@ import styles from "./ConsentMessage.module.css";
 const About = () => {
   const { data } = useContext(Context);
   return (
-    <section className="my-10">
+    <section className="my-10 md:p-0 p-2">
       <div className="font-bold text-[20px] my-3">ABOUT EVENT</div>
       <div
         dangerouslySetInnerHTML={{ __html: data.description }}

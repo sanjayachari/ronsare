@@ -1,13 +1,34 @@
-import React from 'react'
+import { Context } from "@/app/contexts/Context";
+import React, { useContext } from "react";
 
 const Banner = () => {
+  const {
+    data,
+    startTime,
+    setStartTime,
+    eventStartDate,
+    setEventStartDate,
+    endTime,
+    setEndTime,
+    eventEndDate,
+    setEventEndDate,
+  } = useContext(Context);
+  
+  // console.log(data);
   return (
-    <div className='pl-[20px] md:w-[40%] xl:w-[50%] 2xl:w-[60%] flex flex-col justify-center items-start md:pl-[100px] xl:pl-[100px] 2xl:pl-[200px] text-white'>
-        <div className='font-bold text-[20px] md:text-[35px] '>KonfHub Frontend Evaluation </div>
-        <div className='md:text-[20px] text-[14px] opacity-80'>Event Live Link : Open streaming website</div>
-        <div className='md:text-[20px] text-[14px] opacity-80'>Date: Jul 31st, 2034 6:00 AM - Aug 31st, 2034 6:00 PM IST</div>
+    <div className="pl-[20px] md:w-[40%] xl:w-[50%] 2xl:w-[60%] flex flex-col justify-center items-start md:pl-[100px] xl:pl-[100px] 2xl:pl-[200px] text-white">
+      <div className="font-bold text-[20px] md:text-[35px] ">{data?.name}</div>
+      <div className="md:text-[20px] text-[14px] opacity-80 flex items-center justify-center gap-3">
+        Open streaming website:{" "}
+        <div className=" md:text-[18px] text-blue-500 underline">
+          Event Live Link
+        </div>
+      </div>
+      <div className="md:text-[20px] text-[14px] opacity-80">
+        Date: {eventStartDate} {startTime} - {eventEndDate} {endTime}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;

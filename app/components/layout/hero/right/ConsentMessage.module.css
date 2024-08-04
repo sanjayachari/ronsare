@@ -1,0 +1,70 @@
+/* components/ConsentText.module.css */
+
+.consent-text {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.consent-text a {
+  color: #007bff; /* Example link color */
+  text-decoration: none; /* Removes underline */
+}
+
+.consent-text a:hover {
+  text-decoration: underline; /* Adds underline on hover */
+}
+
+.consent-text img {
+  max-width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10%; /* Smaller margin for smaller screens */
+}
+
+.consent-text iframe {
+  max-width: 100%; /* Make images responsive */
+  height: 200px; /* Maintain aspect ratio */
+}
+
+.consent-text table {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Removes space between borders */
+  overflow-x: auto; /* Allows horizontal scrolling if table overflows */
+  margin: 10px 0; /* Reduced margin for smaller screens */
+  border: 1px solid #ddd; /* Light border for the table */
+  }
+
+.consent-text th, .consent-text td {
+  padding: 8px; /* Slightly reduced padding for smaller screens */
+  border: 1px solid #ddd; /* Light border for cells */
+  text-align: left; /* Aligns text to the left */
+}
+
+.consent-text th {
+  background-color: #f4f4f4; /* Light grey background */
+  color: #333; /* Dark text color */
+}
+.consent-text tbody tr:hover {
+  background-color: #f1f1f1; /* Light grey background on hover */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .consent-text img {
+    margin: 10px; /* Larger margin for larger screens */
+  }
+
+  .consent-text table {
+    margin: 20px 0; /* Larger margin for larger screens */
+  }
+
+  .consent-text th, .consent-text td {
+    padding: 12px; /* Larger padding for larger screens */
+  }
+
+  .consent-text iframe {
+   max-height: 100%; /* Larger padding for larger screens */
+   max-width: 100%; /* Larger padding for larger screens */
+
+  }
+  
+}

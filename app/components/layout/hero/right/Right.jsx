@@ -1,10 +1,26 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useContext } from "react";
 import { IoIosVideocam } from "react-icons/io";
 import { FaTicket } from "react-icons/fa6";
 import Image from "next/image";
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
+import { Context } from "@/app/contexts/Context";
+import styles from "./ConsentMessage.module.css";
+import Link from "next/link";
+import { FaLink } from "react-icons/fa";
 
 const Right = () => {
+  const {
+    data,
+    startTime,
+    setStartTime,
+    eventStartDate,
+    setEventStartDate,
+    endTime,
+    setEndTime,
+    eventEndDate,
+    setEventEndDate,
+  } = useContext(Context);
+
   const [dropdown, seDropdown] = useState(false);
   const scrollableElementRef = useRef(null); // Create a ref for the scrollable element
 
@@ -14,6 +30,42 @@ const Right = () => {
       scrollableElementRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [dropdown]); // Re-run this effect when `dropdown` changes
+
+  const [secondsLeft, setSecondsLeft] = useState(0);
+  const countdownRef = useRef(null);
+
+  function createDate(dateString, timeString) {
+    const dateTimeString = `${dateString}T${timeString}`;
+    // console.log(dateTimeString);
+    return dateTimeString;
+  }
+
+  useEffect(() => {
+    const now = new Date();
+
+    const getDate = createDate(data?.start_date, data?.start_time);
+    // console.log(getDate);
+    const startDate = new Date(getDate); // ISO 8601 format
+    const diffInSeconds = Math.ceil((startDate - now) / 1000);
+
+    setSecondsLeft(diffInSeconds);
+
+    const updateCountdown = () => {
+      setSecondsLeft(secondsLeft - 1);
+    };
+
+    const countdownInterval = setInterval(updateCountdown, 1000);
+
+    return () => clearInterval(countdownInterval);
+  }, [secondsLeft]);
+
+  const formatTime = (totalSeconds) => {
+    const days = Math.floor(totalSeconds / (24 * 60 * 60));
+    const hours = Math.floor((totalSeconds % (24 * 60 * 60)) / (60 * 60));
+    const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
+    const seconds = totalSeconds % 60;
+    return `${days}D : ${hours}H : ${minutes}M : ${seconds}s`;
+  };
 
   return (
     <div className="z-40 rounded-md shadow-2xl border w-full bg-white my-10 pb-5 h-full xl:h-[450px] 2xl:h-[495px] overflow-auto scroll-auto hide-scrollbar">
@@ -37,20 +89,27 @@ const Right = () => {
                 <FaTicket /> PAID
               </div>
             </div>
-            <div className="border border-black rounded-md p-2">
+            {/* <p ref={countdownRef}>{formatTime(secondsLeft)}</p> */}
+
+            <div className="border border-[#596275] border-opacity-50 rounded-md p-2">
               {/* <div className='pb-3 text-[18px] flex gap-2'> Event Live Link : <div className='text-blue-500 underline'>Click</div></div> */}
               <div className="text-[18px]">EVENT STARTS IN</div>
-              <div className="text-[20px] font-bold">
-                3648D : 5H : 19M : 15S
+              <div
+                className="text-[20px] font-bold animate-pulse"
+                ref={countdownRef}
+              >
+                {formatTime(secondsLeft)}
               </div>
             </div>
           </div>
           <div className="px-3">
-            <div className="border border-black p-2 rounded-md w-full my-1 bg-black text-white text-center">
+            <div className="hover:bg-[#572148] cursor-not-allowed duration-500 border border-[#596275] border-opacity-50 p-2 rounded-md w-full my-1 bg-black text-white text-center">
               Buy Now
             </div>
-            <div className="border border-black p-2 rounded-md w-full my-1 text-center">
-              Official Website
+            <div className=" hover:text-blue-500 duration-500 border border-[#596275] border-opacity-50 p-2 rounded-md w-full my-1 text-center cursor-pointer">
+             <Link href={data?.organiser_website} target="_blank" className="flex gap-3 items-center justify-center">
+             Official Website <FaLink/>
+             </Link>
             </div>
           </div>
           <div className="px-3 py-2">
@@ -60,13 +119,16 @@ const Right = () => {
               onClick={() => seDropdown(!dropdown)}
             >
               <div className="flex items-center justify-start gap-2">
-                {" "}
-                <img
-                  src="https://dev-media.konfhub.com/past_events/2024/June/09/1717977208703-f9c5c15d-b0f1-4aeb-a492-3464c2c97afd.jpg"
-                  className="h-[30px] w-[30px] rounded-full"
-                  alt=""
-                />
-                Manjunath R
+                <div className="relative h-[30px] 2xl:h-[40px] w-[40px] rounded-full">
+                  <Image
+                    src="https://dev-media.konfhub.com/past_events/2024/June/09/1717977208703-f9c5c15d-b0f1-4aeb-a492-3464c2c97afd.jpg"
+                    layout="fill"
+                    objectFit="cover" // This determines how the image fills the container
+                    alt="Host"
+                    className="rounded-full"
+                  />
+                </div>
+                {data?.organiser_name}
               </div>
               {dropdown ? (
                 <RiArrowDropUpLine
@@ -81,10 +143,12 @@ const Right = () => {
               )}
             </div>
             {dropdown && (
-              <div className="my-1" ref={scrollableElementRef}>
-                This is the description of the organiser. You can get to know
-                more about the organiser here.
-              </div>
+              <div
+                ref={scrollableElementRef}
+                dangerouslySetInnerHTML={{ __html: data?.organiser_info }}
+                className={`${styles['consent-text']} my-1`} // Applying Tailwind's full width utility
+
+              />
             )}
           </div>
         </div>

@@ -9,26 +9,43 @@ import { CiSquareRemove } from "react-icons/ci";
 import { MdOutlineCancel } from "react-icons/md";
 
 const Navbar = () => {
-  const { data } = useContext(Context);
+  const {
+    data,
+    startTime,
+    setStartTime,
+    eventStartDate,
+    setEventStartDate,
+    endTime,
+    setEndTime,
+    eventEndDate,
+    setEventEndDate,
+  } = useContext(Context);
   console.log(data);
 
-  const [startDate, setStartDate] = useState("");
-  const [startTime, setStartTime] = useState("");
   const [showAlert, setShowAlert] = useState(true);
-
   function formatDate(dateString) {
-    // Convert the date string to a moment object
-    const date = moment(dateString, "YYYY-MM-DD");
-
-    // Format the date as "Month DD, YYYY"
-    const formattedDate = date.format("MMMM D, YYYY");
-
-    return formattedDate;
+    const date = new Date(dateString);
+    const monthNames = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    const day = date.getDate();
+    const monthIndex = date.getMonth();
+    return `${day} ${monthNames[monthIndex]} ${date.getFullYear()}`;
   }
 
   // Example usage
-  const dateString = "2024-05-15";
-  console.log(formatDate(dateString)); // Output: "May 15, 2024"
+  // const dateString = "2024-05-15";
 
   function formatTime(timeString) {
     // Convert the time string to a moment object
@@ -41,13 +58,15 @@ const Navbar = () => {
   }
 
   useEffect(() => {
-    const timeString = "00:30:00";
-    console.log(formatTime(timeString)); // Output: "12:30 AM"
-    setStartTime(formatTime(timeString));
+    // const timeString = "00:30:00";
+    // console.log(formatTime(timeString)); // Output: "12:30 AM"
+    setStartTime(formatTime(data?.start_time));
+    setEndTime(formatTime(data?.end_time));
     // Example usage
     const startDate1 = "2034-07-31";
     console.log(formatDate(startDate1)); // Output: July 31, 2034
-    setStartDate(formatDate(startDate1));
+    setEventStartDate(formatDate(data?.start_date));
+    setEventEndDate(formatDate(data?.end_date));
   }, []);
 
   return (
@@ -55,7 +74,7 @@ const Navbar = () => {
       <div className="relative">
         {showAlert && (
           <div className="h-[50px] w-full bg-[#572148] flex items-center justify-start p-2 md:justify-center text-white btn-shine md:text-[16px] text-[13px]">
-            {startDate} {startTime} - {startDate} {startTime}{" "}
+            {eventStartDate} {startTime} - {eventEndDate} {endTime}
           </div>
         )}
 

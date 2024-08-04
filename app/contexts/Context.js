@@ -8,30 +8,47 @@ export const Context = createContext(null);
 export function ContextProvider({ children }) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [eventStartDate, setEventStartDate] = useState("");
+  const [eventEndDate, setEventEndDate] = useState("");
+  const [startTime, setStartTime] = useState("");
+  const [endTime, setEndTime] = useState("");
 
   useEffect(() => {
     const fun = async () => {
-        setLoading(true)
+      setLoading(true);
       try {
         const res = await axios.get(API);
-        console.log(res.status);
-        if(res.status == 200){
-            // console.log('rendered')
-            setLoading(false)
-            setData(res.data);
+        // console.log(res.status);
+        if (res.status == 200) {
+          // console.log('rendered')
+          setLoading(false);
+          setData(res.data);
         }
       } catch (error) {
         console.log(error);
-        setLoading(true)
+        setLoading(true);
         // throw error
-
       }
     };
     fun();
   }, []);
-  console.log(loading)
+  // console.log(loading)
 
-  const value = { data, setData, loading, setLoading };
+  const value = {
+    data,
+    setData,
+    loading,
+    setLoading,
+    eventStartDate,
+    setEventStartDate,
+    setEventStartDate,
+    startTime,
+    setStartTime,
+    endTime,
+    setEndTime,
+    eventEndDate,
+    setEventEndDate,
+  };
   return (
     <>
       <Context.Provider value={value}>{children}</Context.Provider>
