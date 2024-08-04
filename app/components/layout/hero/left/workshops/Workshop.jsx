@@ -6,7 +6,11 @@ import styles from "../../../../../globals.css";
 const Workshop = () => {
   const { data } = useContext(Context);
   console.log(data);
-  const workshopData = [{ id: 0 }, { id: 1 }, { id: 2 }];
+  const workshopData = [
+    { id: 0, name: "How to make more money" ,time : "Jun 11th, 2024 at 9:00 AM" },
+    { id: 1, name: "How to make video" ,time : "Jul 13th, 2024 at 10:00 AM" },
+    { id: 2, name: "How to learn js" ,time : "Aug 14th, 2024 at 11:00 AM" },
+  ];
   return (
     <section className="my-[100px]" id="workshop">
       <div className="my-3 font-bold text-[20px]">
@@ -33,10 +37,10 @@ const Workshop = () => {
                 />
               </div>
               <div className="text-black relative p-2 font-bold">
-                How to make more money
+                {e.name}
               </div>
               <div className="w-full absolute bottom-0 left-0">
-                <div className="p-2">Jun 11th, 2024 at 10:00 AM</div>
+                <div className="p-2">{e.time}</div>
                 <div className=" flex justify-between items-center p-3">
                   <div className="relative h-[40px] 2xl:h-[40px] w-[40px] ">
                     <Image
