@@ -51,3 +51,12 @@ This project follows the standard Next.js structure. Below are some key director
     components/: Reusable UI components for the application.
     constant/: Api url
     context/ : initialized the context API
+
+### Event Details Component
+
+The Event Details component displays information about a specific event. Due to occasional missing data in the API response, such as the event description or organizer details, we've introduced static fallback values. These defaults ensure that the UI remains informative even when certain data is unavailable.
+
+- **Description Placeholder**: When the event description is missing, a generic text like "Event Description Not Available" is displayed.
+- **Organizer Default Image**: If the organizer's profile picture URL is missing, a default avatar image is shown to maintain visual consistency.
+
+
