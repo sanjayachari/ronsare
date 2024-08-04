@@ -7,10 +7,10 @@ const Workshop = () => {
     <section className="my-[100px]">
       <div className="my-3 font-bold text-[20px]">THIS IS WORKSHOP SECTION</div>
       <div className="my-2">This is the description for workshop sections.</div>
-     <div className="flex flex-col xl:flex-row items-center md:justify-start justify-center gap-2 z-10">
+     <div className="flex flex-col xl:flex-row items-center md:justify-start justify-center gap-5 z-10">
      {workshopData.map((e,i) => {
         return (
-          <div className="relative rounded-md border border-black w-[450px] bg-white my-10 pb-5 h-[350px] z-10" key={i}>
+          <div className="relative rounded-md border border-black w-[350px] bg-white my-10 pb-5 h-[350px] z-10" key={i}>
             <div className="relative h-[150px] 2xl:h-[200px] w-full rounded-md z-10">
               <Image
                 src="https://dev-media.konfhub.com/default-event-posters/default-event-posters-image5.jpg"
