@@ -1,103 +1,119 @@
 "use client";
-import React, { useContext, useEffect, useState } from "react";
-import { IoPersonOutline } from "react-icons/io5";
-import { Context } from "../../contexts/Context";
+
+import { Dropdown, Space } from "antd";
+import { DownOutlined } from "@ant-design/icons";
+import "./navbar.css";
 import Image from "next/image";
-import moment from "moment";
-import "./css/shine.css";
-import { CiSquareRemove } from "react-icons/ci";
-import { MdOutlineCancel } from "react-icons/md";
+import Link from "next/link";
 
-const Navbar = () => {
-  const {
-    data,
-    startTime,
-    setStartTime,
-    eventStartDate,
-    setEventStartDate,
-    endTime,
-    setEndTime,
-    eventEndDate,
-    setEventEndDate,
-  } = useContext(Context);
-  console.log(data);
+const items = [
+  {
+    key: "2",
+    label: "Industries",
+    children: [
+      {
+        key: "2-1",
+        label: <Link href="/coming-soon">Healthcare</Link>, // Redirects to coming-soon
+      },
+    ],
+  },
+  {
+    key: "3",
+    label: "Service",
+    children: [
+      {
+        key: "3-1",
+        label: <Link href="/coming-soon">Staff Augmentation</Link>, // Redirects to coming-soon
+      },
+      {
+        key: "3-2",
+        label: <Link href="/coming-soon">Technology Consulting</Link>, // Redirects to coming-soon
+      },
+      {
+        key: "3-3",
+        label: <Link href="/coming-soon">Data & Analytics</Link>, // Redirects to coming-soon
+      },
+    ],
+  },
+];
 
-  const [showAlert, setShowAlert] = useState(true);
-  function formatDate(dateString) {
-    const date = new Date(dateString);
-    const monthNames = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-    const day = date.getDate();
-    const monthIndex = date.getMonth();
-    return `${day} ${monthNames[monthIndex]} ${date.getFullYear()}`;
-  }
+const items2 = [
+  {
+    key: "1",
+    label: <Link href="/coming-soon">About us</Link>, // Redirects to coming-soon
+  },
+  {
+    key: "2",
+    label: <Link href="/coming-soon">Our Team</Link>, // Redirects to coming-soon
+  },
+  {
+    key: "3",
+    label: <Link href="/coming-soon">Events & Publications</Link>, // Redirects to coming-soon
+  },
+];
 
-  // Example usage
-  // const dateString = "2024-05-15";
+const items3 = [
+  {
+    key: "1",
+    label: <Link href="/coming-soon">Digital Insights</Link>, // Redirects to coming-soon
+  },
+];
 
-  function formatTime(timeString) {
-    // Convert the time string to a moment object
-    const time = moment(timeString, "HH:mm:ss");
-
-    // Format the time as 12-hour with AM/PM
-    const formattedTime = time.format("hh:mm A");
-
-    return formattedTime;
-  }
-
-  useEffect(() => {
-    // const timeString = "00:30:00";
-    // console.log(formatTime(timeString)); // Output: "12:30 AM"
-    setStartTime(formatTime(data?.start_time));
-    setEndTime(formatTime(data?.end_time));
-    // Example usage
-    const startDate1 = "2034-07-31";
-    console.log(formatDate(startDate1)); // Output: July 31, 2034
-    setEventStartDate(formatDate(data?.start_date));
-    setEventEndDate(formatDate(data?.end_date));
-  }, []);
-
+export default function Navbar() {
   return (
-    <div className="w-full shadow-md sticky top-0 z-20">
-      <div className="relative">
-        {showAlert && (
-          <div className="h-[50px] w-full bg-[#572148] flex items-center justify-start p-2 md:justify-center text-white btn-shine md:text-[16px] text-[13px]">
-            {eventStartDate} {startTime} - {eventEndDate} {endTime}
-          </div>
-        )}
+    <div className="navbar-container w-[100vw] flex justify-between items-center p-4 ">
+      <Link href="/" className="navbar-brand text-white">
+        <Image
+          src="/logo-light.png"
+          alt="hero"
+          objectFit="cover" // Ensures the image covers the container proportionally
+          className="z-10" // Ensure the image has a lower z-index than the text and navbar
+          height={50} // Adjust height for the navbar
+          width={150} // Adjust width for the navbar
+        />
+      </Link>
+      <div className="navbar-links flex items-center space-x-4">
+        <Dropdown
+          menu={{ items }}
+          trigger={["hover"]}
+          overlayClassName="navbar-dropdown"
+          placement="bottomLeft"
+        >
+          <a onClick={(e) => e.preventDefault()} className="navbar-link text-white">
+            <Space>
+              What we do <DownOutlined className="text-[14px]" />
+            </Space>
+          </a>
+        </Dropdown>
+        <Dropdown
+          menu={{ items: items2 }}
+          trigger={["hover"]}
+          overlayClassName="navbar-dropdown"
+          placement="bottomLeft"
+        >
+          <a onClick={(e) => e.preventDefault()} className="navbar-link text-white">
+            <Space>
+              Who we are <DownOutlined className="text-[14px]" />
+            </Space>
+          </a>
+        </Dropdown>
+        <Dropdown
+          menu={{ items: items3 }}
+          trigger={["hover"]}
+          overlayClassName="navbar-dropdown"
+          placement="bottomRight"
+        >
+          <a onClick={(e) => e.preventDefault()} className="navbar-link text-white">
+            <Space>
+              Insights <DownOutlined className="text-[14px]" />
+            </Space>
+          </a>
+        </Dropdown>
 
-        <div className="absolute right-3 top-[15px] flex items-center justify-center text-white  text-[20px] cursor-pointer">
-          <CiSquareRemove onClick={() => setShowAlert(false)} />
-        </div>
-      </div>
-      <div className="flex items-center justify-between px-0 md:px-10 bg-white">
-        <div>
-          <Image
-            src="/konfhub-logo.svg"
-            width={150}
-            height={150}
-            alt="konfhub-logo"
-            className="h-[50px] md:h-[70px]"
-          />
-        </div>
-        <div>
-          <IoPersonOutline className="mr-4 md:mr-0" />
-        </div>
+        <Link href="/coming-soon">
+          <div className="px-4 py-2 rounded-[10px] text-black font-bold bg-white cursor-pointer">Contact us</div>
+        </Link>
       </div>
     </div>
   );
-};
-
-export default Navbar;
+}

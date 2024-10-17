@@ -1,0 +1,72 @@
+/* General styling for the dropdown */
+.ant-dropdown-menu {
+
+    margin-left: 0;
+    width: 180px; /* Width for the main dropdown */
+    
+  }
+  
+  /* Adjust submenu positioning */
+  .ant-dropdown-menu-submenu {
+    position: relative;
+    
+  }
+  
+  /* Ensure submenu appears to the right of the parent dropdown */
+  .ant-dropdown-menu-submenu .ant-dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 10px; /* This moves the submenu to the right of the parent menu */
+    width: 180px; /* Set width for the submenu */
+    z-index: 9999; /* Ensure it's on top of the parent */
+  }
+  
+  /* Hover effect */
+  .ant-dropdown-menu-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Navbar container styling */
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding-left: 120px;
+    padding-right: 120px;
+
+  }
+  
+  .navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    
+  }
+  
+  .navbar-link {
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    
+    
+  }
+  
+  /* Ensure dropdown is outside of flexbox constraints */
+  .navbar-dropdown {
+    position: absolute !important;
+    z-index: 9999;
+    /* border: 2px solid #000000; */
+  }
+  .customFont {
+    font-style: sans-serif;
+
+  }
+  

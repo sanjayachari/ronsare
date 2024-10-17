@@ -1,62 +1,36 @@
-# KonfHub Frontend Evaluation Task
-
-This is a Next.js application built for the KonfHub frontend evaluation task. It demonstrates the required features and functionality for the assessment.
-
-## Live Demo
-
-You can access the live version of the app here: [KonfHub Frontend Evaluation Task](https://konfhub-assignment-delta.vercel.app/)
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-Follow these instructions to get a copy of the project running on your local machine.
+First, run the development server:
 
-### Prerequisites
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Ensure you have the following software installed:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- **Node.js** (v12.0.0 or higher)
-- **npm** (v6.0.0 or higher) or **yarn** (v1.22.0 or higher) or **pnpm** or **bun**
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-### Installation
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-1. **Clone the repository:**
+## Learn More
 
-   ```bash
-   git clone https://github.com/your-username/konfhub-frontend-evaluation-task.git
-   cd konfhub-frontend-evaluation-task
+To learn more about Next.js, take a look at the following resources:
 
-Install dependencies:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-    - npm install
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-Running the Development Server
+## Deploy on Vercel
 
-    - npm run dev
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Building for Production
-
-    - npm run build
-
-Starting the Production Server
-
-    - npm start
-
-Visit http://localhost:3000 in your browser to view the production build.
-
-Project Structure : 
-This project follows the standard Next.js structure. Below are some key directories and their contents:
-
-    pages/: Contains the application's page components.
-    public/: Houses static assets like images and fonts.
-    components/: Reusable UI components for the application.
-    constant/: Api url
-    context/ : initialized the context API
-
-### Event Details Component
-
-The Event Details component displays information about a specific event. Due to occasional missing data in the API response, such as the event description or organizer details, we've introduced static fallback values. These defaults ensure that the UI remains informative even when certain data is unavailable.
-
-- **Description Placeholder**: When the event description is missing, a generic text like "Event Description Not Available" is displayed.
-- **Organizer Default Image**: If the organizer's profile picture URL is missing, a default avatar image is shown to maintain visual consistency.
-
-
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

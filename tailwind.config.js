@@ -1,38 +1,70 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
+    darkMode: ["class"],
+    content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  screens: {
-    'sm': '640px', // Existing small breakpoint
-    'md': '768px', // Existing medium breakpoint
-    'lg': '1024px', // Existing large breakpoint
-    'xl': '1280px', // Existing extra-large breakpoint
-    '2xl': '1536px', // Existing 2x extra-large breakpoint
-    'custom': '1200px', // Adding a new custom breakpoint
-  },
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-    },
+  	extend: {
+  		colors: {
+  			background: 'hsl(var(--background))',
+  			foreground: 'hsl(var(--foreground))',
+  			card: {
+  				DEFAULT: 'hsl(var(--card))',
+  				foreground: 'hsl(var(--card-foreground))'
+  			},
+  			popover: {
+  				DEFAULT: 'hsl(var(--popover))',
+  				foreground: 'hsl(var(--popover-foreground))'
+  			},
+  			primary: {
+  				DEFAULT: 'hsl(var(--primary))',
+  				foreground: 'hsl(var(--primary-foreground))'
+  			},
+  			secondary: {
+  				DEFAULT: 'hsl(var(--secondary))',
+  				foreground: 'hsl(var(--secondary-foreground))'
+  			},
+  			muted: {
+  				DEFAULT: 'hsl(var(--muted))',
+  				foreground: 'hsl(var(--muted-foreground))'
+  			},
+  			accent: {
+  				DEFAULT: 'hsl(var(--accent))',
+  				foreground: 'hsl(var(--accent-foreground))'
+  			},
+  			destructive: {
+  				DEFAULT: 'hsl(var(--destructive))',
+  				foreground: 'hsl(var(--destructive-foreground))'
+  			},
+  			border: 'hsl(var(--border))',
+  			input: 'hsl(var(--input))',
+  			ring: 'hsl(var(--ring))',
+  			chart: {
+  				'1': 'hsl(var(--chart-1))',
+  				'2': 'hsl(var(--chart-2))',
+  				'3': 'hsl(var(--chart-3))',
+  				'4': 'hsl(var(--chart-4))',
+  				'5': 'hsl(var(--chart-5))'
+  			}
+  		},
+		  screens: {
+
+			'sm': '360px',
+
+			'md': '640px',
+	  
+			'xl': '1024px',
+	  
+			'xxl': '1280px',
+
+			'xxxl': '1440px',
+
+		  },
+		
+  	}
   },
-  plugins: [
-    function({ addUtilities }) {
-      const newUtilities = {
-        '.hide-scrollbar::-webkit-scrollbar': {
-          display: 'none',
-        },
-        '.hide-scrollbar': {
-          '-ms-overflow-style': 'none', // IE and Edge
-          'scrollbar-width': 'none', // Firefox
-        },
-      };
-      addUtilities(newUtilities, ['responsive', 'hover']);
-    }
-  ]};
+  plugins: [require("tailwindcss-animate")],
+};
