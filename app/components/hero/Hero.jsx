@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="mt-[90px]  w-full   flex justify-center items-center bg-white px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20  max-w-screen-xxxl mx-auto">
-      <div className="w-full flex flex-col-reverse md:flex-row justify-center md:justify-between items-center py-8 md:py-12 xl:py-16 xxl:py-20 ">
+    <div className=" md:mt-[90px]  w-full   flex justify-center items-center bg-white px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20  max-w-screen-xxxl mx-auto">
+      <div className="w-full flex gap-5 flex-col-reverse md:flex-row justify-center md:justify-between items-center py-8 md:py-12 xl:py-16 xxl:py-20 ">
         {/* Left Content */}
         <motion.div
           className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left"
@@ -63,7 +63,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="relative w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[350px] md:h-[350px] xl:w-[450px] xl:h-[450px] xxl:w-[500px] xxl:h-[500px]">
+          <div className="relative w-[200px] h-[200px] sm:w-[340px] sm:h-[340px] md:w-[350px] md:h-[350px] xl:w-[450px] xl:h-[450px] xxl:w-[500px] xxl:h-[500px]">
             <Image
               src="/hero.svg"
               alt="hero"

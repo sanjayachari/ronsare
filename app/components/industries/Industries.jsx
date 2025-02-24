@@ -21,14 +21,14 @@ const Industries = () => {
 
   return (
     <div className="w-full bg-white">
-       <div className="h-auto md:py-0 py-10 gap-10 md:h-[700px] rounded-t-2xl w-full px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20 max-w-screen-xxxl mx-auto md:flex-row flex-col flex items-center">
+       <div className="h-auto md:py-0 py-10 gap-10 md:h-[700px] rounded-t-2xl w-full px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20 max-w-screen-xxxl mx-auto md:flex-row flex-col-reverse flex items-center">
       
 <div className="md:w-[60%] flex flex-col items-start justify-center">
-<h1 className="text-3xl sm:text-4xl xl:text-5xl font-semibold text-[#0732EF] my-4 md:my-16">
+<h1 className="text-3xl sm:text-4xl xl:text-5xl font-semibold text-[#0732EF] my-2 md:my-16">
   Empowering Businesses with Technology & Talent
 </h1>
 <div className="xl:flex gap-5">
-  <div>
+  <div className="md:mb-0 md:mt-0 mb-5 mt-3">
     <h3 className="text-xl sm:text-xl xl:text-2xl font-semibold text-[#0732EF]">
       US IT Recruiting
     </h3>
@@ -37,7 +37,7 @@ const Industries = () => {
       process with our expert recruiting solutions.
     </p>
   </div>
-  <div>
+  <div className="md:my-0 my-5">
     <h3 className="text-xl sm:text-xl xl:text-2xl font-semibold text-[#0732EF]">
       US Healthcare
     </h3>
@@ -45,7 +45,7 @@ const Industries = () => {
       Innovating healthcare with technology. Improve efficiency, enhance patient care, and drive better outcomes.
     </p>
   </div>
-  <div>
+  <div className="md:my-0 my-5">
     <h3 className="text-xl sm:text-xl xl:text-2xl font-semibold text-[#0732EF]">
       AI-Driven Data Analytics
     </h3>
@@ -60,7 +60,7 @@ const Industries = () => {
 </div>
  
          <motion.div
-           className="relative h-full flex items-center justify-center w-[90%] md:w-[40%] perspective-1000 "
+           className="relative h-full flex items-center justify-center w-[100%] md:w-[40%] perspective-1000 "
            style={{ transformStyle: "preserve-3d" }}
            animate={{ rotateX, rotateY }}
            transition={{ type: "spring", stiffness: 100, damping: 10 }}
@@ -73,7 +73,7 @@ const Industries = () => {
            <Image
              src="/recruiter1.png"
              alt="hero"
-             className="lg:absolute -bottom-[160px] left-0 object-cover rounded-3xl shadow-2xl"
+             className="lg:absolute -bottom-[160px] left-0 object-cover rounded-3xl md:shadow-2xl"
              height={1000}
              width={1000}
            />

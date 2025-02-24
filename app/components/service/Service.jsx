@@ -4,15 +4,15 @@ import { FaStarOfLife } from "react-icons/fa6";
 const Service = () => {
   return (
     <div className="w-full bg-[#0732EF]">
-      <div className="w-full px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20 max-w-screen-xxxl mx-auto pt-20 md:pt-60 pb-10">
-        <h1 className="text-3xl sm:text-4xl xl:text-5xl font-semibold text-white my-8">
-          OUR HEALTHCARE SOLUTIONS
+      <div className="w-full px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20 max-w-screen-xxxl mx-auto pt-10 md:pt-40 pb-10">
+        <h1 className="text-3xl sm:text-4xl xl:text-5xl font-semibold text-white my-2 md:my-4">
+          Our Healthcare Solutions
         </h1>
         <h3 className="text-xl sm:text-xl xl:text-xl max-w-xl text-white">
           AI powered healthcare data-to-outcome platform
         </h3>
 
-        <div className="flex flex-col gap-5 my-20">
+        <div className="flex flex-col gap-5 my-10 md:my-20">
           <div className="flex md:flex-row flex-col gap-5 justify-end">
             <div className="group w-full md:w-[400px] lg:h-[250px] border border-white rounded-3xl p-5">
               <FaStarOfLife className="h-7 w-7 text-white group-hover:animate-spin" />

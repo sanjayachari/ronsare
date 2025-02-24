@@ -32,10 +32,10 @@ const Business = () => {
   }, []);
 
   return (
-    <div className="w-full bg-[#0732EF]">
+    <div className="w-full bg-[#0732EF] pb-4">
       <div
         ref={sectionRef}
-        className="w-full px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20 max-w-screen-xxxl mx-auto pb-10 pt-10"
+        className="w-full px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20 max-w-screen-xxxl mx-auto md:pb-10 pt-0"
       >
         <h1 className="text-3xl sm:text-4xl xl:text-5xl font-semibold text-white text-center">
           Boosting Businesses

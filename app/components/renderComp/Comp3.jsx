@@ -3,8 +3,8 @@ import React from "react";
 
 const Comp3 = () => {
   return (
-    // <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 px-4 lg:px-[120px]">
-    <div className="px-4 lg:px-[120px]">
+    // <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 lg:px-[120px]">
+    <div className="lg:px-[120px]">
 
       {/* Images Section */}
       {/* <div className="flex flex-col lg:flex-row items-center justify-center gap-5 lg:col-span-1">
@@ -36,7 +36,7 @@ const Comp3 = () => {
       </div> */}
 
       {/* Text Section */}
-      <div className="flex justify-center flex-col p-6 lg:col-span-1">
+      <div className="flex justify-center flex-col lg:col-span-1">
         <div className="text-[#0732EF] text-[22px] sm:text-[25px] font-semibold leading-tight my-3">
           Accelerate results with analytics
         </div>
