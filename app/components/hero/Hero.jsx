@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className=" md:mt-[90px]  w-full   flex justify-center items-center bg-white px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20  max-w-screen-xxxl mx-auto">
+    <div className="mt-[60px] md:mt-[90px]  w-full   flex justify-center items-center bg-white px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20  max-w-screen-xxxl mx-auto">
       <div className="w-full flex gap-5 flex-col-reverse md:flex-row justify-center md:justify-between items-center py-8 md:py-12 xl:py-16 xxl:py-20 ">
         {/* Left Content */}
         <motion.div
