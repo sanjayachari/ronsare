@@ -3,9 +3,11 @@ import React from "react";
 
 const Comp3 = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 px-4 lg:px-[120px]">
+    // <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 px-4 lg:px-[120px]">
+    <div className="px-4 lg:px-[120px]">
+
       {/* Images Section */}
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-5 lg:col-span-1">
+      {/* <div className="flex flex-col lg:flex-row items-center justify-center gap-5 lg:col-span-1">
         <div>
           <Image
             src={"/se5.jpg"}
@@ -31,21 +33,21 @@ const Comp3 = () => {
             className="rounded-[20px] object-cover"
           />
         </div>
-      </div>
+      </div> */}
 
       {/* Text Section */}
       <div className="flex justify-center flex-col p-6 lg:col-span-1">
-        <div className="text-[#343f52] text-[22px] sm:text-[25px] font-semibold leading-tight my-3">
+        <div className="text-[#0732EF] text-[22px] sm:text-[25px] font-semibold leading-tight my-3">
           Accelerate results with analytics
         </div>
-        <div className="text-[#A27D80] my-2 font-medium">
+        <div className="text-[#0732EF] my-2 font-medium">
           Predictive analytics harness machine learning capabilities to identify
           patterns, insights, and relationships within data. With tools like
           SPSS and Hadoop, we collect and process your data to build predictive
           models. Make informed forecasts and business decisions.
         </div>
 
-        <div className="flex flex-col gap-4 text-[#A27D80] my-2 font-medium">
+        <div className="flex flex-col gap-4 text-[#0732EF] my-2 font-medium">
           <div className="flex gap-2 items-start my-2">
             <Image
               src={"/correct.png"}
@@ -89,7 +91,7 @@ const Comp3 = () => {
           </div>
         </div>
 
-        <button className="bg-[#FAB758] w-[150px] p-3 text-white rounded-[10px] my-4">
+        <button className="bg-[#0732EF] w-[150px] p-3 text-white rounded-[10px] my-4">
           Learn More
         </button>
       </div>

@@ -30,7 +30,7 @@ export default function MobileNavbar() {
  },[])
 
   return (
-    <div className="w-full  bg-black bg-opacity-50 text-white  ">
+    <div className="w-full  bg-blue-500 text-white  ">
       <div className="flex justify-between w-full items-center p-5 h-[60px]">
         {" "}
         {/* Navbar Brand (Logo) */}
@@ -53,7 +53,7 @@ export default function MobileNavbar() {
 
       {/* Mobile Menu */}
       <motion.div
-        className={`mobile-menu fixed top-0 left-0 w-[80%] h-screen bg-black flex flex-col p-5  space-y-6 z-50`}
+        className={`mobile-menu fixed top-0 left-0 w-[80%] h-screen bg-blue-800 flex flex-col p-5  space-y-6 z-50`}
         initial={{ x: "-100%" }} // Start off-screen to the left
         animate={{ x: menuOpen ? 0 : "-100%" }} // Animate to screen position or off-screen
         transition={{ duration: 0.3 }} // Duration for smooth sliding without bounce

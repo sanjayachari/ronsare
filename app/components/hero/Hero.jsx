@@ -1,84 +1,79 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import Navbar from "../navbar/Navbar";
-import MobileNavbar from "../navbar/ResponsiveNav";
 
 const Hero = () => {
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false); // State to track whether the mobile menu is open or closed
-
   return (
-    <div className="relative w-full h-[100vh]">
-      {/* Background Image */}
-      <Image
-        src="/bgnw.jpg"
-        alt="hero"
-        layout="fill"
-        objectFit="cover"
-        className="z-0 filter brightness-50"
-        onLoad={() => setIsImageLoaded(true)}
-      />
+    <div className="mt-[90px]  w-full   flex justify-center items-center bg-white px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20  max-w-screen-xxxl mx-auto">
+      <div className="w-full flex flex-col-reverse md:flex-row justify-center md:justify-between items-center py-8 md:py-12 xl:py-16 xxl:py-20 ">
+        {/* Left Content */}
+        <motion.div
+          className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-semibold text-[#0732EF] my-3 md:my-4 leading-tight">
+            Empowering Performance. Enabling Value.
+          </h1>
+          <p className="text-sm sm:text-base md:text-lg xl:text-xl text-[#0732EF] max-w-lg my-3 md:my-5">
+            We help businesses find skilled candidates, modernize technology
+            delivery, and build new businesses to fuel growth.
+          </p>
 
-      {isImageLoaded && (
-        <>
-          {/* Navbar */}
-          <motion.div
-            className="absolute top-0 z-50 w-full"
+          {/* Button */}
+          <motion.button
+            className="mt-4 w-[250px] sm:w-[280px] md:w-[300px] text-center py-3 px-6 border border-[#0732EF] rounded-3xl text-[#0732EF] flex items-center gap-2 sm:gap-3 cursor-pointer hover:bg-[#0732EF] hover:text-white transition duration-500"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.5 }}
           >
-            <div className="md:block hidden sticky top-0 z-50">
-              <Navbar />
+            Together, let's do great things
+          </motion.button>
+
+          {/* Cards Section */}
+    <div className="lg:block hidden">
+    <div className=" mt-6 md:mt-8 flex  justify-center md:justify-start gap-4 md:gap-6">
+            <div className="w-[90%] sm:w-[300px] lg:w-[250px] xxl:w-[300px] h-auto p-4 border border-[#0732EF] rounded-2xl flex flex-col space-y-2">
+              <h3 className="text-lg md:text-xl font-semibold text-[#0732EF]">
+                Hire. Grow. Succeed.
+              </h3>
+              <p className="text-sm md:text-base text-[#0732EF]">
+                We connect top IT talent with leading companies across the US,
+                ensuring seamless recruitment and career growth.
+              </p>
             </div>
-
-            <div className="md:hidden fixed top-0 w-full  z-50">
-              <MobileNavbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            <div className="w-[90%] sm:w-[300px] lg:w-[250px] xxl:w-[300px] h-auto p-4 border border-[#0732EF] rounded-2xl flex flex-col space-y-2">
+              <h3 className="text-lg md:text-xl font-semibold text-[#0732EF]">
+                Care. Connect. Heal.
+              </h3>
+              <p className="text-sm md:text-base text-[#0732EF]">
+                Providing trusted healthcare staffing solutions by matching skilled professionals with hospitals and clinics across the US.
+              </p>
             </div>
-          </motion.div>
+          </div>
+    </div>
+        </motion.div>
 
-          {/* Text and Button Section */}
-          <motion.div
-            className={`absolute top-1/2 left-[5%] sm:left-[10%] transform -translate-y-1/2 z-20 text-white text-start w-[90%] md:w-auto`}
-          >
-            {/* Heading */}
-            <motion.h1
-              className="text-2xl md:text-[45px] lg:text-[55px] font-semibold xl:w-[60%]"
-              style={{ fontFamily: '"Manrope", sans-serif', lineHeight: "1.2" }}
-              initial={{ y: -20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              Empowering Performance. Enabling Value.
-            </motion.h1>
-
-            {/* Subheading */}
-            <motion.p
-              className="text-lg md:text-xl lg:text-2xl mt-4  xl:w-[65%]"
-              style={{ fontFamily: '"Manrope", sans-serif', lineHeight: "1.4" }}
-              initial={{ y: -20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
-              We help businesses find skilled candidates, modernize technology
-              delivery, and build new businesses to fuel growth.
-            </motion.p>
-
-            {/* Button */}
-            <motion.button
-              className="mt-8 py-3 px-6 sm:py-4 sm:px-8 text-sm sm:text-base font-bold rounded-[10px] text-black bg-white hover:bg-gray-200 transition duration-300"
-              style={{ fontFamily: '"Manrope", sans-serif', lineHeight: "1.2" }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 1 }}
-            >
-              Together, let's do great things
-            </motion.button>
-          </motion.div>
-        </>
-      )}
+        {/* Right Image */}
+        <motion.div
+          className="w-full md:w-1/2 flex justify-center xl:justify-end"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="relative w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[350px] md:h-[350px] xl:w-[450px] xl:h-[450px] xxl:w-[500px] xxl:h-[500px]">
+            <Image
+              src="/hero.svg"
+              alt="hero"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 };

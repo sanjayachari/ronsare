@@ -5,7 +5,7 @@ import { FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <div className="w-full bg-[#343F52] px-6 md:px-10 xl:px-[120px] pb-[40px]">
+    <div className="w-full bg-[#0732EF] px-6 md:px-10 xl:px-[120px] pb-[40px]">
       <div className="border-t border-white border-opacity-20 w-full" />
 
       <div className="flex flex-col md:flex-row md:justify-between py-[40px]">
@@ -55,7 +55,7 @@ const Footer = () => {
             <div className="flex py-6">
               <input
                 type="text"
-                className="w-full p-3 border border-white border-opacity-10 rounded-l-[10px] bg-[#3A4557] placeholder-white text-white"
+                className="w-full p-3 border border-white border-opacity-10 rounded-l-[10px] bg-[#0732EF] placeholder-white text-white"
                 placeholder="Email Address"
               />
               <button className="px-6 py-3 bg-white text-[#7483D4] font-semibold rounded-r-[10px] h-[50px]">

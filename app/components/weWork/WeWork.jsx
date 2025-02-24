@@ -10,18 +10,18 @@ const WeWork = () => {
   const [state, setState] = useState(1);
 
   return (
-    <div className="w-full my-2 flex items-center justify-center flex-col px-4">
-      <div className="font-bold text-[18px] sm:text-[20px] text-[#343f52] opacity-50 text-center">
+    <div className="w-full my-2 lg:flex items-center justify-center flex-col  md:flex-row">
+      {/* <div className="font-bold text-[18px] sm:text-[20px] text-[#343f52] opacity-50 text-center">
         HOW WE CAN HELP
       </div>
       <div className="my-3 text-[24px] sm:text-[30px] lg:text-[35px] font-semibold w-full sm:w-[80%] lg:w-[45%] text-center text-[#343f52] leading-tight">
         Together, we work with clients across the digital ecosystem to meet their
         business challenges.
-      </div>
+      </div> */}
 
-      <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 my-10 w-full lg:w-auto justify-center items-center">
+        <div className=" flex flex-col lg:flex-col gap-6 lg:gap-10 my-10 w-full lg:w-auto justify-center items-center text-[#0732EF]">
         <div
-          className="h-[120px] lg:h-[100px] w-full lg:w-[400px] cursor-pointer hover:bg-sky-50 hover:shadow-2xl duration-500 border-opacity-25 border border-black rounded-[10px] opacity-70 flex gap-2 items-center justify-center p-4"
+          className=" w-full lg:w-[400px] cursor-pointer hover:bg-sky-50 hover:shadow-2xl duration-500 border border-[#0732EF] rounded-[10px]  flex gap-2 items-center justify-center p-4"
           onClick={() => setState(1)}
         >
           <div className="w-[20%] lg:w-[30%] flex items-center justify-center">
@@ -30,7 +30,7 @@ const WeWork = () => {
               alt="hero"
               width={35}
               height={35}
-              className=" text-red-500  rounded-[10px] object-cover"
+              className=" text-[#0732EF]  rounded-[10px] object-cover"
             />
           </div>
           <div className="w-[80%] lg:w-[70%] flex items-center justify-center">
@@ -47,7 +47,7 @@ const WeWork = () => {
         </div>
 
         <div
-          className="h-[120px] lg:h-[100px] w-full lg:w-[400px] cursor-pointer hover:bg-sky-50 hover:shadow-2xl duration-500 border-opacity-25 border border-black rounded-[10px] opacity-70 flex gap-2 items-center justify-center p-4"
+          className=" w-full lg:w-[400px] cursor-pointer hover:bg-sky-50 hover:shadow-2xl duration-500 border border-[#0732EF] rounded-[10px]  flex gap-2 items-center justify-center p-4"
           onClick={() => setState(2)}
         >
           <div className="w-[20%] lg:w-[30%] flex items-center justify-center">
@@ -56,7 +56,7 @@ const WeWork = () => {
               alt="hero"
               width={35}
               height={35}
-              className=" text-red-500  rounded-[10px] object-cover"
+              className=" text-[#0732EF]  rounded-[10px] object-cover"
             />
           </div>
           <div className="w-[80%] lg:w-[70%] flex items-center justify-center">
@@ -73,7 +73,7 @@ const WeWork = () => {
         </div>
 
         <div
-          className="h-[120px] lg:h-[100px] w-full lg:w-[400px] cursor-pointer hover:bg-sky-50 hover:shadow-2xl duration-500 border-opacity-25 border border-black rounded-[10px] opacity-70 flex gap-2 items-center justify-center p-4"
+          className=" w-full lg:w-[400px] cursor-pointer hover:bg-sky-50 hover:shadow-2xl duration-500 border border-[#0732EF] rounded-[10px]  flex gap-2 items-center justify-center p-4"
           onClick={() => setState(3)}
         >
           <div className="w-[20%] lg:w-[30%] flex items-center justify-center">
@@ -82,7 +82,7 @@ const WeWork = () => {
               alt="hero"
               width={35}
               height={35}
-              className=" text-red-500 object-cover"
+              className=" text-[#0732EF] object-cover"
             />
           </div>
           <div className="w-[80%] lg:w-[70%] flex items-center justify-center">
