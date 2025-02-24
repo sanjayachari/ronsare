@@ -20,7 +20,7 @@ const Service = () => {
                 Your Data Your Way With DataOps
               </h3>
               <p className="text-white">
-                Bring the data you need in the format it's available to you. Our
+                Bring the data you need in the format its available to you. Our
                 no-code platform quickly configures the data, analyzes it with
                 built-in AI models, and delivers actionable insights in real-time.
               </p>

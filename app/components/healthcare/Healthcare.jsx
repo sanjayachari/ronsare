@@ -44,7 +44,7 @@ const Healthcare = () => {
             </div>
             {openSection === 1 && (
               <div className="my-4 text-[#A27D80] font-medium px-6">
-                Bring the data you need in the format it's available to you. Our no-code platform quickly configures the data, analyzes it with built-in AI models, and delivers actionable insights to your needs and preferences in real-time.
+                Bring the data you need in the format its available to you. Our no-code platform quickly configures the data, analyzes it with built-in AI models, and delivers actionable insights to your needs and preferences in real-time.
               </div>
             )}
           </div>

@@ -7,7 +7,7 @@ const LetsTalk = () => {
         Questions? We will put you on the right path.
       </div>
       <button className="px-6 py-3 bg-white text-[#7483D4] font-semibold rounded-[10px] h-[50px] w-full md:w-[160px]">
-        Let's talk!
+        Lets talk!
       </button>
     </div>
   );

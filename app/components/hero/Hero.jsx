@@ -29,7 +29,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            Together, let's do great things
+            Together, lets do great things
           </motion.button>
 
           {/* Cards Section */}
