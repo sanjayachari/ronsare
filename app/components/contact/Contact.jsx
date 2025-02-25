@@ -6,7 +6,7 @@ export default function ContactUs() {
         <div className="md:w-1/2 pr-8">
           <h2 className="text-3xl font-bold text-[#0732EF] mb-6">Contact Us</h2>
           <p className="text-[#1E40AF] mb-4">
-            Let's start a conversation. Ask how we can help you.
+            Lets start a conversation. Ask how we can help you.
           </p>
           <p className="text-[#1E40AF] mb-4 font-semibold">See our AI platforms in action:</p>
           <p className="text-[#1E40AF] mb-4">Request a personalized demo of Ronsare’s TREO IQ or SmartDoc AI platform.</p>
