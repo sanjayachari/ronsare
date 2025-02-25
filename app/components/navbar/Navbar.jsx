@@ -30,7 +30,7 @@ const items2 = [
     key: "1", 
     label: (
       <div className="text-[#0732EF]">
-        <Link href="/coming-soon">About us</Link>
+        <Link href="/contact">About us</Link>
       </div>
     ) 
   },
@@ -58,7 +58,7 @@ const items3 = [
     key: "1", 
     label: (
       <div className="text-[#0732EF]">
-        <Link href="/coming-soon">Digital Insights</Link>
+        <Link href="/insight">Digital Insights</Link>
       </div>
     ) 
   }
