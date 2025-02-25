@@ -51,7 +51,7 @@ export default function MobileNavbar() {
   return (
     <div
       className={`
-        w-full fixed top-0 left-0 right-0 z-50 bg-blue-500 text-white transition-transform duration-200 ease-out 
+        w-full fixed top-0 left-0 right-0 z-50 bg-[#0732EF] shadow-lg text-white transition-transform duration-200 ease-out 
         ${isVisible ? "translate-y-0" : "-translate-y-full"}
       `}
     >
@@ -69,7 +69,7 @@ export default function MobileNavbar() {
 
       {/* Mobile Menu */}
       <motion.div
-        className={`mobile-menu fixed top-0 left-0 w-[80%] h-screen bg-blue-800 flex flex-col p-5 space-y-6 z-50`}
+        className={`mobile-menu fixed top-0 left-0 w-[80%] h-screen bg-[#0732EF] flex flex-col p-5 space-y-6 z-50`}
         initial={{ x: "-100%" }}
         animate={{ x: menuOpen ? 0 : "-100%" }}
         transition={{ duration: 0.3 }}

@@ -9,18 +9,60 @@ import Link from "next/link";
 const items = [
   {
     key: "2",
-    label: "Industries",
-    children: [{ key: "2-1", label: <Link href="/coming-soon">Healthcare</Link> }],
+    label: <div className="text-[#0732EF]">Industries</div>,
+    children: [
+      { 
+        key: "2-1", 
+        label: (
+          <div className="text-[#0732EF]">
+            <Link href="/industries">Healthcare</Link>
+          </div>
+        ) 
+      }
+    ],
   },
 ];
 
+
+
 const items2 = [
-  { key: "1", label: <Link href="/coming-soon">About us</Link> },
-  { key: "2", label: <Link href="/coming-soon">Our Team</Link> },
-  { key: "3", label: <Link href="/coming-soon">Events & Publications</Link> },
+  { 
+    key: "1", 
+    label: (
+      <div className="text-[#0732EF]">
+        <Link href="/coming-soon">About us</Link>
+      </div>
+    ) 
+  },
+  { 
+    key: "2", 
+    label: (
+      <div className="text-[#0732EF]">
+        <Link href="/coming-soon">Our Team</Link>
+      </div>
+    ) 
+  },
+  { 
+    key: "3", 
+    label: (
+      <div className="text-[#0732EF]">
+        <Link href="/coming-soon">Events & Publications</Link>
+      </div>
+    ) 
+  },
 ];
 
-const items3 = [{ key: "1", label: <Link href="/coming-soon">Digital Insights</Link> }];
+
+const items3 = [
+  { 
+    key: "1", 
+    label: (
+      <div className="text-[#0732EF]">
+        <Link href="/coming-soon">Digital Insights</Link>
+      </div>
+    ) 
+  }
+];
 
 export default function Navbar() {
   const [isClient, setIsClient] = useState(false);
@@ -96,7 +138,7 @@ export default function Navbar() {
           )}
 
           {/* ✅ Contact Us Button */}
-          <Link href="/coming-soon">
+          <Link href="/contact">
             <div className="px-4 py-2 rounded-[10px] text-white font-bold bg-[#0732EF] cursor-pointer">
               Contact us
             </div>

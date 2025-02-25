@@ -24,7 +24,7 @@ const Hero = () => {
 
           {/* Button */}
           <motion.button
-            className="mt-4 w-[250px] sm:w-[280px] md:w-[300px] text-center py-3 px-6 border border-[#0732EF] rounded-3xl text-[#0732EF] flex items-center gap-2 sm:gap-3 cursor-pointer hover:bg-[#0732EF] hover:text-white transition duration-500"
+            className="mt-4 w-[250px]  sm:w-[280px] md:w-[300px] text-center py-3 px-6 border border-[#0732EF] rounded-3xl bg-[#0732EF] flex items-center gap-2 sm:gap-3 cursor-pointer hover:bg-white hover:text-[#0732EF] text-white transition duration-500"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -33,27 +33,29 @@ const Hero = () => {
           </motion.button>
 
           {/* Cards Section */}
-    <div className="lg:block hidden">
-    <div className=" mt-6 md:mt-8 flex  justify-center md:justify-start gap-4 md:gap-6">
-            <div className="w-[90%] sm:w-[300px] lg:w-[250px] xxl:w-[300px] h-auto p-4 border border-[#0732EF] rounded-2xl flex flex-col space-y-2">
-              <h3 className="text-lg md:text-xl font-semibold text-[#0732EF]">
-                Hire. Grow. Succeed.
-              </h3>
-              <p className="text-sm md:text-base text-[#0732EF]">
-                We connect top IT talent with leading companies across the US,
-                ensuring seamless recruitment and career growth.
-              </p>
-            </div>
-            <div className="w-[90%] sm:w-[300px] lg:w-[250px] xxl:w-[300px] h-auto p-4 border border-[#0732EF] rounded-2xl flex flex-col space-y-2">
-              <h3 className="text-lg md:text-xl font-semibold text-[#0732EF]">
-                Care. Connect. Heal.
-              </h3>
-              <p className="text-sm md:text-base text-[#0732EF]">
-                Providing trusted healthcare staffing solutions by matching skilled professionals with hospitals and clinics across the US.
-              </p>
+          <div className="lg:block hidden">
+            <div className=" mt-6 md:mt-8 flex  justify-center md:justify-start gap-4 md:gap-6">
+              <div className="w-[90%] sm:w-[300px] lg:w-[250px] xxl:w-[300px] h-auto p-4 border border-[#0732EF] rounded-2xl flex flex-col space-y-2">
+                <h3 className="text-lg md:text-xl font-semibold text-[#0732EF]">
+                  Hire. Grow. Succeed.
+                </h3>
+                <p className="text-sm md:text-base text-[#0732EF]">
+                  We connect top IT talent with leading companies across the US,
+                  ensuring seamless recruitment and career growth.
+                </p>
+              </div>
+              <div className="w-[90%] sm:w-[300px] lg:w-[250px] xxl:w-[300px] h-auto p-4 border border-[#0732EF] rounded-2xl flex flex-col space-y-2">
+                <h3 className="text-lg md:text-xl font-semibold text-[#0732EF]">
+                  Care. Connect. Heal.
+                </h3>
+                <p className="text-sm md:text-base text-[#0732EF]">
+                  Providing trusted healthcare staffing solutions by matching
+                  skilled professionals with hospitals and clinics across the
+                  US.
+                </p>
+              </div>
             </div>
           </div>
-    </div>
         </motion.div>
 
         {/* Right Image */}
