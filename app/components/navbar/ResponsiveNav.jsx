@@ -58,9 +58,9 @@ export default function MobileNavbar() {
     >
       <div className="flex justify-between w-full items-center p-5 h-[60px]">
         {/* Logo */}
-        <div>
+        <Link href={'/'}>
           <Image src="/logo-light.png" alt="logo" width={120} height={40} className="object-cover" />
-        </div>
+        </Link>
 
         {/* Hamburger Icon */}
         <div className="menu-icon">
