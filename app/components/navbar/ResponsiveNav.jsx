@@ -6,6 +6,7 @@ import { MenuOutlined } from "@ant-design/icons"; // Ant Design icons for hambur
 import { motion } from "framer-motion"; // Import framer-motion for animations
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import { MdOutlineCancel } from "react-icons/md";
+import Link from "next/link";
 
 export default function MobileNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -107,9 +108,9 @@ export default function MobileNavbar() {
 
               {showChildRoute1 && (
                 <div className="flex flex-col pl-8 my-4">
-                  <div className="text-lg my-1">About Us</div>
-                  <div className="text-lg my-1">Our team</div>
-                  <div className="text-lg my-1">Events & Publication</div>
+                  <Link href={'/industries'} className="text-lg my-1">Healthcare</Link>
+                  {/* <div className="text-lg my-1">Our team</div>
+                  <div className="text-lg my-1">Events & Publication</div> */}
                 </div>
               )}
             </div>
@@ -133,9 +134,9 @@ export default function MobileNavbar() {
 
           {showRoute2 && (
             <div className="flex flex-col pl-4 my-4">
-              <div className="text-lg my-1">Industries</div>
-              <div className="text-lg my-1">Industries</div>
-              <div className="text-lg my-1">Industries</div>
+              <Link href={'/contact'} className="text-lg my-1">About us</Link>
+              {/* <div className="text-lg my-1">Industries</div>
+              <div className="text-lg my-1">Industries</div> */}
             </div>
           )}
         </div>
@@ -158,7 +159,7 @@ export default function MobileNavbar() {
 
           {showRoute3 && (
             <div className="flex flex-col pl-4 my-4">
-              <div className="text-lg">Digital Insights</div>
+              <Link href={'/insight'} className="text-lg">Digital Insights</Link>
             </div>
           )}
         </div>

@@ -4,9 +4,9 @@ import * as React from "react"
 
 const DigitalInsights = () => {
   return (
-    <div className="container mx-auto py-[60px] md:pt-[120px] md:pb-[60px] px-4 sm:px-6 md:px-12">  
-      <div className=" mx-auto  rounded-2xl overflow-hidden border border-gray-200">  
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">  
+    <div className="container mx-auto py-[100px] md:pt-[120px] md:pb-[60px] px-2 sm:px-0 md:px-12">  
+      <div className="   rounded-2xl overflow-hidden border border-gray-200">  
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-2 md:p-6">  
           {/* Left Side - Digital Insights Info */}  
           <div>  
             <div className="space-y-6">  
