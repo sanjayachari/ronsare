@@ -34,22 +34,22 @@ const items2 = [
       </div>
     ) 
   },
-  { 
-    key: "2", 
-    label: (
-      <div className="text-[#0732EF]">
-        <Link href="/coming-soon">Our Team</Link>
-      </div>
-    ) 
-  },
-  { 
-    key: "3", 
-    label: (
-      <div className="text-[#0732EF]">
-        <Link href="/coming-soon">Events & Publications</Link>
-      </div>
-    ) 
-  },
+  // { 
+  //   key: "2", 
+  //   label: (
+  //     <div className="text-[#0732EF]">
+  //       <Link href="/coming-soon">Our Team</Link>
+  //     </div>
+  //   ) 
+  // },
+  // { 
+  //   key: "3", 
+  //   label: (
+  //     <div className="text-[#0732EF]">
+  //       <Link href="/coming-soon">Events & Publications</Link>
+  //     </div>
+  //   ) 
+  // },
 ];
 
 
