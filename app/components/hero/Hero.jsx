@@ -23,14 +23,14 @@ const Hero = () => {
           </p>
 
           {/* Button */}
-          <motion.button
+          <motion.Link
             className="mt-4 w-[250px]  sm:w-[280px] md:w-[300px] text-center py-3 px-6 border border-[#0732EF] rounded-3xl bg-[#0732EF] flex items-center gap-2 sm:gap-3 cursor-pointer hover:bg-white hover:text-[#0732EF] text-white transition duration-500"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
             Together, lets do great things
-          </motion.button>
+          </motion.Link>
 
           {/* Cards Section */}
           <div className="lg:block hidden">

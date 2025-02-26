@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Industries = () => {
   const [rotateX, setRotateX] = useState(0);
@@ -54,9 +55,9 @@ const Industries = () => {
     </p>
   </div>
 </div>
-<button className="mt-4 py-3 px-6 border border-[#0732EF] rounded-md text-[#0732EF] flex items-center gap-3 cursor-pointer hover:bg-blue-800 hover:text-white transition duration-500">
+<Link href={'/industries'} className="mt-4 py-3 px-6 border border-[#0732EF] rounded-md text-[#0732EF] flex items-center gap-3 cursor-pointer hover:bg-blue-800 hover:text-white transition duration-500">
   Learn more
-</button>
+</Link>
 </div>
  
          <motion.div

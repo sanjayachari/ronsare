@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const LetsTalk = () => {
@@ -8,9 +9,9 @@ const LetsTalk = () => {
           <div className="text-[28px] md:text-[35px] font-semibold text-white leading-tight mb-0 md:mb-0 md:w-[60%] xl:w-[50%]">
             Questions? We will put you on the right path.
           </div>
-          <button className="px-6 py-3 bg-white text-[#7483D4] font-semibold rounded-[10px] h-[50px] w-full md:w-[160px]">
+          <Link href='/contact' className="px-6 py-3 bg-white text-[#7483D4] font-semibold rounded-[10px] h-[50px] w-full md:w-[160px]">
             Lets talk!
-          </button>
+          </Link>
         </div>
       </div>
     </div>

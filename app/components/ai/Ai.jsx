@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Ai = () => {
   const [rotateX, setRotateX] = useState(0);
@@ -10,7 +11,7 @@ const Ai = () => {
 
   const handleMouseMove = (e) => {
     const { clientX, clientY, currentTarget } = e;
-    const { width, height, left, top } = currentTarget.getBoundingClientRect();
+    const { width, height, left, top } = currentTaLearnrget.getBoundingClientRect();
 
     const x = (clientX - left) / width - 0.5;
     const y = (clientY - top) / height - 0.5;
@@ -32,9 +33,9 @@ const Ai = () => {
           <p className="text-xl sm:text-xl xl:text-xl text-[#0732EF] mt-2 mb-8 max-w-xl">
             Reinvent how your business works with AI. Unify and optimize all your data with Ronsare Artificial Intelligence Solutions for smarter insights, automation, and growth.
           </p>
-          <button className="mt-4 py-3 px-6 border border-[#0732EF] rounded-md text-[#0732EF] flex items-center gap-3 cursor-pointer hover:bg-[#0732EF] hover:text-white transition duration-500">
+          <Link href={'/industries'} className=" mt-4 py-3 px-6 border border-[#0732EF] rounded-md text-[#0732EF] flex items-center gap-3 cursor-pointer hover:bg-[#0732EF] hover:text-white transition duration-500">
             Learn more
-          </button>
+          </Link>
         </div>
 
         <motion.div
