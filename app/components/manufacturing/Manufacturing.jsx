@@ -5,7 +5,7 @@ const Manufacturing = () => {
     <section className="bg-gradient-to-b from-white to-gray-200 py-20">
       <div className="mt-[60px] md:mt-[90px] w-full flex flex-col items-center px-6 sm:px-10 md:px-16 xl:px-24 max-w-screen-xxxl mx-auto">
         <div className="text-center max-w-3xl">
-          <h2 className="text-5xl font-extrabold text-[#0732EF] tracking-wide">Innova’s Manufacturing Expertise</h2>
+          <h2 className="text-5xl font-extrabold text-[#0732EF] tracking-wide">Ronsare Manufacturing Expertise</h2>
           <p className="text-lg text-gray-700 mt-6 leading-relaxed">
             As the Fifth Industrial Revolution advances, technologies such as AI, robotics, and IoT are transforming industrial processes.
             Our innovators embrace this exciting chapter, fostering synergy between humans and machines for efficiency, innovation, and sustainability.
@@ -27,9 +27,9 @@ const Manufacturing = () => {
         </div>
 
         <div className="mt-20 max-w-4xl text-center">
-          <h3 className="text-3xl font-bold text-gray-900">The Innova Edge</h3>
+          <h3 className="text-3xl font-bold text-gray-900">The Ronsare Edge</h3>
           <p className="text-gray-700 mt-6 text-lg leading-relaxed">
-            With 25+ years of Digital Manufacturing expertise, we prioritize a "Digital First" approach,
+            With 25+ years of Digital Manufacturing expertise, we prioritize a Digital First approach,
             incorporating agility, software-first design, and progressive industry strategies.
           </p>
         </div>

@@ -10,7 +10,7 @@ const FinancialBanking = () => {
         </h2>
         <p className="text-lg text-gray-600 mt-4">
           With 25 years of experience in helping our customers build innovative
-          solutions in Banking and Financial Services, Innova is steering the
+          solutions in Banking and Financial Services, Ronsare is steering the
           “Extreme design” approach in digital solutions.
         </p>
       </div>
