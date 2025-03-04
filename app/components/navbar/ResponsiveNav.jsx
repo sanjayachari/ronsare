@@ -95,24 +95,30 @@ export default function MobileNavbar() {
               setShowChildRoute3(false);
             }}
           >
-            <div className="text-lg">What we do</div>
+            <div className="text-lg">Industries</div>
             {showRoute1 ? <FaAngleUp /> : <FaAngleDown />}
           </div>
 
           {showRoute1 && (
             <div className="flex flex-col pl-4 my-4">
-              <div className="flex justify-between items-center" onClick={() => setShowChildRoute1(!showChildRoute1)}>
-                <div className="text-lg">Industries</div>
-                {showChildRoute1 ? <FaAngleUp /> : <FaAngleDown />}
+              <div className="flex justify-between items-start flex-col"
+              // onClick={() => setShowChildRoute1(!showChildRoute1)}
+              >
+                <Link href={'/healthcare'} className="text-lg">Healcare IT</Link>
+                <Link href={'/financial-service'} className="text-lg">Financial services</Link>
+                <Link href={'/manufacture'} className="text-lg">Manufacturing & logistics</Link>
+                <Link href={'/retail'} className="text-lg">Consumer Retail</Link>
+
+                {/* {showChildRoute1 ? <FaAngleUp /> : <FaAngleDown />} */}
               </div>
 
-              {showChildRoute1 && (
+              {/* {showChildRoute1 && (
                 <div className="flex flex-col pl-8 my-4">
                   <Link href={'/industries'} className="text-lg my-1">Healthcare</Link>
-                  {/* <div className="text-lg my-1">Our team</div>
-                  <div className="text-lg my-1">Events & Publication</div> */}
+                  <div className="text-lg my-1">Our team</div>
+                  <div className="text-lg my-1">Events & Publication</div>
                 </div>
-              )}
+              )} */}
             </div>
           )}
         </div>
