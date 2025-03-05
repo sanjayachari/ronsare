@@ -61,26 +61,34 @@ const items2 = [
     key: "1",
     label: (
       <div className="text-[#0732EF]">
-        <Link href="/contact">About us</Link>
+        <Link href="/talent-solutions">Talent Solutions</Link>
       </div>
     ),
   },
-  // {
-  //   key: "2",
-  //   label: (
-  //     <div className="text-[#0732EF]">
-  //       <Link href="/coming-soon">Our Team</Link>
-  //     </div>
-  //   )
-  // },
-  // {
-  //   key: "3",
-  //   label: (
-  //     <div className="text-[#0732EF]">
-  //       <Link href="/coming-soon">Events & Publications</Link>
-  //     </div>
-  //   )
-  // },
+  {
+    key: "2",
+    label: (
+      <div className="text-[#0732EF]">
+        <Link href="/insight">Digital solutions</Link>
+      </div>
+    )
+  },
+  {
+    key: "3",
+    label: (
+      <div className="text-[#0732EF]">
+        <Link href="/supply-chain-and-logistics">Digital Operations</Link>
+      </div>
+    )
+  },
+  {
+    key: "4",
+    label: (
+      <div className="text-[#0732EF]">
+        <Link href="/life-science-solutions">Life Science Solutions</Link>
+      </div>
+    )
+  },
 ];
 
 const items3 = [
@@ -88,7 +96,7 @@ const items3 = [
     key: "1",
     label: (
       <div className="text-[#0732EF]">
-        <Link href="/insight">Digital Insights</Link>
+        <Link href="/about">About Us</Link>
       </div>
     ),
   },
@@ -153,6 +161,7 @@ export default function Navbar() {
         <div className="navbar-links flex items-center space-x-4">
           {isClient && (
             <>
+             
               <Dropdown
                 menu={{ items }}
                 trigger={["hover"]}
@@ -171,11 +180,11 @@ export default function Navbar() {
               >
                 <a onClick={(e) => e.preventDefault()} className="navbar-link">
                   <Space className="text-[#0732EF]">
-                    Who we are <DownOutlined className="text-[14px]" />
+                    Solutions <DownOutlined className="text-[14px]" />
                   </Space>
                 </a>
               </Dropdown>
-              <Dropdown
+              {/* <Dropdown
                 menu={{ items: items3 }}
                 trigger={["hover"]}
                 overlayClassName="navbar-dropdown"
@@ -185,7 +194,13 @@ export default function Navbar() {
                     Insights <DownOutlined className="text-[14px]" />
                   </Space>
                 </a>
-              </Dropdown>
+              </Dropdown> */}
+
+<Link href="/about">
+            <div className="px-4 py-2 rounded-[10px] font-light text-[#0732EF]  cursor-pointer">
+              About us
+            </div>
+          </Link>
             </>
           )}
 
