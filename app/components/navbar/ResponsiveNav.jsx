@@ -2,20 +2,15 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { MenuOutlined } from "@ant-design/icons"; // Ant Design icons for hamburger and close
-import { motion } from "framer-motion"; // Import framer-motion for animations
+import { MenuOutlined } from "@ant-design/icons";
+import { motion } from "framer-motion";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import { MdOutlineCancel } from "react-icons/md";
 import Link from "next/link";
 
 export default function MobileNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [showRoute1, setShowRoute1] = useState(false);
-  const [showRoute2, setShowRoute2] = useState(false);
-  const [showRoute3, setShowRoute3] = useState(false);
-  const [showChildRoute1, setShowChildRoute1] = useState(false);
-  const [showChildRoute2, setShowChildRoute2] = useState(false);
-  const [showChildRoute3, setShowChildRoute3] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(null);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -23,12 +18,14 @@ export default function MobileNavbar() {
     setMenuOpen(!menuOpen);
   };
 
-  // Prevent background scrolling when the menu is open
+  const handleMenuClick = (menu) => {
+    setActiveMenu(activeMenu === menu ? null : menu);
+  };
+
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "auto";
   }, [menuOpen]);
 
-  // Sticky Navbar on Scroll
   useEffect(() => {
     let ticking = false;
 
@@ -56,129 +53,61 @@ export default function MobileNavbar() {
         ${isVisible ? "translate-y-0" : "-translate-y-full"}
       `}
     >
-      <div className="flex justify-between w-full items-center p-5 h-[60px]">
-        {/* Logo */}
+      <div className="flex justify-between w-full items-center px-6 py-4 h-[60px]">
         <Link href={'/'}>
           <Image src="/logo-light.png" alt="logo" width={120} height={40} className="object-cover" />
         </Link>
-
-        {/* Hamburger Icon */}
-        <div className="menu-icon">
-          {!menuOpen && <MenuOutlined className="text-2xl" onClick={toggleMenu} />}
+        <div className="menu-icon text-3xl cursor-pointer" onClick={toggleMenu}>
+          {!menuOpen && <MenuOutlined />}
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <motion.div
-        className={`mobile-menu fixed top-0 left-0 w-[80%] h-screen bg-[#0732EF] flex flex-col p-5 space-y-6 z-50`}
+        className={`mobile-menu fixed top-0 left-0 w-[75%] h-screen bg-[#0732EF] flex flex-col p-6 space-y-6 z-50 shadow-xl`}
         initial={{ x: "-100%" }}
         animate={{ x: menuOpen ? 0 : "-100%" }}
         transition={{ duration: 0.3 }}
       >
-        <div className="flex justify-between w-full">
-          <Image src="/logo-light.png" alt="logo" width={150} height={150} className="py-4" />
-          {/* Close Button */}
-          <div className="flex justify-end w-full py-4">
-            <MdOutlineCancel className="text-2xl" onClick={() => setMenuOpen(false)} />
-          </div>
+        <div className="flex justify-between items-center w-full pb-4 ">
+          <Image src="/logo-light.png" alt="logo" width={120} height={40} className="object-cover" />
+          <MdOutlineCancel className="text-3xl cursor-pointer" onClick={() => setMenuOpen(false)} />
         </div>
 
-        <div>
-          <div
-            className="flex justify-between items-center"
-            onClick={() => {
-              setShowRoute1(!showRoute1);
-              setShowRoute2(false);
-              setShowRoute3(false);
-              setShowChildRoute1(false);
-              setShowChildRoute2(false);
-              setShowChildRoute3(false);
-            }}
-          >
-            <div className="text-lg">Industries</div>
-            {showRoute1 ? <FaAngleUp /> : <FaAngleDown />}
-          </div>
-
-          {showRoute1 && (
-            <div className="flex flex-col pl-4 my-4">
-              <div className="flex justify-between items-start flex-col"
-              // onClick={() => setShowChildRoute1(!showChildRoute1)}
-              >
-                <Link href={'/healthcare'} className="text-lg">Healcare IT</Link>
-                <Link href={'/financial-service'} className="text-lg">Financial services</Link>
-                <Link href={'/manufacture'} className="text-lg">Manufacturing & logistics</Link>
-                <Link href={'/retail'} className="text-lg">Consumer Retail</Link>
-
-                {/* {showChildRoute1 ? <FaAngleUp /> : <FaAngleDown />} */}
-              </div>
-
-              {/* {showChildRoute1 && (
-                <div className="flex flex-col pl-8 my-4">
-                  <Link href={'/industries'} className="text-lg my-1">Healthcare</Link>
-                  <div className="text-lg my-1">Our team</div>
-                  <div className="text-lg my-1">Events & Publication</div>
-                </div>
-              )} */}
+        {[
+          { title: "Industries", links: ["/healthcare", "/financial-service", "/manufacture", "/retail"] },
+          { title: "Solutions", links: ["/talent-solutions", "/insight", "/supply-chain-and-logistics", "/life-science-solutions"] },
+          { title: "Insights", links: ["/about"] }
+        ].map((menu, index) => (
+          <div key={index} className="py-2 border-b border-blue-600">
+            <div className="flex justify-between items-center text-lg font-semibold cursor-pointer py-2" onClick={() => handleMenuClick(menu.title)}>
+              <span>{menu.title}</span>
+              {activeMenu === menu.title ? <FaAngleUp /> : <FaAngleDown />}
             </div>
-          )}
-        </div>
 
-        <div>
-          <div
-            className="flex justify-between items-center"
-            onClick={() => {
-              setShowRoute2(!showRoute2);
-              setShowRoute1(false);
-              setShowRoute3(false);
-              setShowChildRoute1(false);
-              setShowChildRoute3(false);
-            }}
-          >
-            <div className="text-lg">Who we are</div>
-            {showRoute2 ? <FaAngleUp /> : <FaAngleDown />}
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={activeMenu === menu.title ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden flex flex-col pl-4"
+            >
+              {menu.links.map((link, i) => (
+                <Link key={i} href={link} className="text-base py-2 text-gray-200 hover:text-white transition-all">
+                  {link.replace("/", "").replace("-", " ")}
+                </Link>
+              ))}
+            </motion.div>
           </div>
-
-          {showRoute2 && (
-            <div className="flex flex-col pl-4 my-4">
-              <Link href={'/contact'} className="text-lg my-1">About us</Link>
-              {/* <div className="text-lg my-1">Industries</div>
-              <div className="text-lg my-1">Industries</div> */}
-            </div>
-          )}
-        </div>
-
-        <div>
-          <div
-            className="flex justify-between items-center"
-            onClick={() => {
-              setShowRoute3(!showRoute3);
-              setShowChildRoute3(false);
-              setShowRoute1(false);
-              setShowRoute2(false);
-              setShowChildRoute1(false);
-              setShowChildRoute2(false);
-            }}
-          >
-            <div className="text-lg">Insights</div>
-            {showRoute3 ? <FaAngleUp /> : <FaAngleDown />}
-          </div>
-
-          {showRoute3 && (
-            <div className="flex flex-col pl-4 my-4">
-              <Link href={'/insight'} className="text-lg">Digital Insights</Link>
-            </div>
-          )}
-        </div>
+        ))}
       </motion.div>
 
-      {/* Overlay for the remaining background */}
       {menuOpen && (
         <motion.div
-          className="fixed top-0 left-0 w-full h-full bg-black z-40"
+          className="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-40"
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.5 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.3 }}
+          onClick={() => setMenuOpen(false)}
         />
       )}
     </div>

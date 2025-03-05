@@ -168,8 +168,8 @@ export default function Navbar() {
                 overlayClassName="navbar-dropdown"
               >
                 <a onClick={(e) => e.preventDefault()} className="navbar-link">
-                  <Space className="text-[#0732EF]">
-                    Industries <DownOutlined className="text-[14px]" />
+                  <Space className="text-[#0732EF] font-semibold">
+                    Industries <DownOutlined className="text-[14px] " />
                   </Space>
                 </a>
               </Dropdown>
@@ -179,8 +179,8 @@ export default function Navbar() {
                 overlayClassName="navbar-dropdown"
               >
                 <a onClick={(e) => e.preventDefault()} className="navbar-link">
-                  <Space className="text-[#0732EF]">
-                    Solutions <DownOutlined className="text-[14px]" />
+                  <Space className="text-[#0732EF] font-semibold">
+                    Solutions <DownOutlined className="text-[14px] " />
                   </Space>
                 </a>
               </Dropdown>
@@ -197,7 +197,7 @@ export default function Navbar() {
               </Dropdown> */}
 
 <Link href="/about">
-            <div className="px-4 py-2 rounded-[10px] font-light text-[#0732EF]  cursor-pointer">
+            <div className="px-4 py-2 rounded-[10px] font-semibold text-[#0732EF]  cursor-pointer">
               About us
             </div>
           </Link>
