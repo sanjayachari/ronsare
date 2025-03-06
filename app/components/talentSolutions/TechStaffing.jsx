@@ -8,7 +8,7 @@ const TechStaffing = () => {
     <div className="pt-20 mt-[60px] md:mt-[90px] w-full flex flex-col items-center px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20 max-w-screen-xxxl mx-auto">
       <h1 className="text-5xl font-extrabold text-[#0732EF] text-center mb-8">Technology Staffing</h1>
       <p className="text-lg text-gray-700 text-center max-w-3xl leading-relaxed">
-        Execute digital initiatives on-time and on-budget. At NLB Services, we transform the talent acquisition landscape, making digital transformation a reality through our IT staffing services.
+        Execute digital initiatives on-time and on-budget. At Ronsare, we transform the talent acquisition landscape, making digital transformation a reality through our IT staffing services.
       </p>
       <div className="mt-16 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
         {[ 

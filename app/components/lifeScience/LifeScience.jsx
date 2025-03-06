@@ -42,7 +42,7 @@ const LifeSciences = () => {
       <div className="w-full py-20 px-4 sm:px-6 md:px-12 lg:px-20 text-center">
         <h1 className="text-5xl font-extrabold text-[#0732EF] mb-6">Enabling Enterprises that Bring Sciences to Life</h1>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-          NLB Life Sciences helps you navigate operational, regulatory, and technological challenges with a digital-first approach, delivering value across the drug lifecycle.
+          Ronsare Life Sciences helps you navigate operational, regulatory, and technological challenges with a digital-first approach, delivering value across the drug lifecycle.
         </p>
       </div>
 

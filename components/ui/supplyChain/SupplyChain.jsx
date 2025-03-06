@@ -37,12 +37,12 @@ const SupplyChain = () => {
     successStories: [
       {
         title: "Tech Conglomerate Saves $2.5M",
-        desc: "With NLB’s ‘Talent Community’.",
+        desc: "With Ronsares ‘Talent Community’.",
         image: "/g1.jpg",
       },
       {
         title: "Global Electronics Manufacturer Saves $1.2M",
-        desc: "With NLB’s Advanced Analytics Solutions.",
+        desc: "With Ronsares Advanced Analytics Solutions.",
         image: "/g9.jpg",
       },
     ],
@@ -56,7 +56,7 @@ const SupplyChain = () => {
         <div className="w-full bg-gradient-to-br py-20 px-4 sm:px-6 md:px-12 lg:px-20 text-center">
           <h1 className="text-5xl font-extrabold text-[#0732EF] mb-6">Supply Chain & Logistics</h1>
           <p className="text-lg text-[#0732EF] max-w-3xl mx-auto leading-relaxed">
-            At NLB Services, we help global enterprises create scalable and connected digital supply networks to drive resilience, agility, and predictability across the value chain.
+            At Ronsare, we help global enterprises create scalable and connected digital supply networks to drive resilience, agility, and predictability across the value chain.
           </p>
         </div>
   
