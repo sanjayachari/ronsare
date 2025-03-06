@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ronsare Consultancy Services - Next.js App
 
-## Getting Started
+## Overview
+This is a Next.js-based web application for Ronsare Consultancy Services, providing staffing and IT consulting solutions. The app is optimized for performance, SEO, and scalability.
 
-First, run the development server:
+## Running the Application
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Without Docker
+The application can be run locally by installing dependencies, building the project, and starting the server. It runs on **port 3000**.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### With Docker
+The application can be containerized using Docker. Once built and run as a container, it will be available on **port 3000**.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Features
+- 🚀 Fast and optimized Next.js framework
+- 🎨 Responsive UI with modern design
+- 🔍 SEO-friendly metadata and structured data
+- 🐳 Docker support for easy deployment
+- 🔑 Secure authentication and optimized backend performance (if applicable)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Deployment
+This app can be deployed to various platforms, including:
+- **Vercel** (Recommended for Next.js)
+- **AWS, DigitalOcean, or any cloud provider**
+- **Dockerized environments for better scalability**
 
-## Learn More
+## Notes
+- Ensure **port 3000** is available before running the app.
+- Use **Docker** for an isolated production environment.
+- For development, a different approach may be required.
 
-To learn more about Next.js, take a look at the following resources:
+## Support
+For any questions or issues, feel free to reach out to the development team.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
