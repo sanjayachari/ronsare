@@ -20,7 +20,7 @@ const NurseStaffing = () => {
 
   return (
     <div className="relative my-[60px] md:mt-[90px] w-full flex flex-col items-center px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20 max-w-screen-xxxl mx-auto">
-      <h1 className="text-5xl font-extrabold text-[#0732EF] text-center mb-6">Nurse Staffing</h1>
+      <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-extrabold text-[#0732EF] text-center mb-6">Nurse Staffing</h1>
       <p className="text-lg text-gray-700 text-center max-w-3xl leading-relaxed">
         Find the right nursing job or hire skilled healthcare professionals with Ronsare Healthcare.
       </p>

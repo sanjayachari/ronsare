@@ -5,7 +5,7 @@ const FinancialBanking = () => {
  <section className="bg-gray-100">
        <div className="py-20 mt-[60px] md:mt-[90px] w-full flex flex-col items-center  px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20 max-w-screen-xxxl mx-auto">
       <div className="text-center max-w-4xl">
-        <h2 className="text-4xl font-bold text-[#0732EF]">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold text-[#0732EF]">
           Banking & Financial Services
         </h2>
         <p className="text-lg text-gray-600 mt-4">

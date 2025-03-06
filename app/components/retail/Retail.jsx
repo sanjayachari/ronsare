@@ -4,8 +4,8 @@ import { FaChartLine, FaStore, FaShippingFast, FaShoppingCart } from "react-icon
 const RetailCPG = () => {
   return (
     <section className="bg-white py-16 md:py-20 lg:py-24">
-      <div className="mt-12 md:mt-16 text-center w-full px-6 sm:px-8 md:px-12 xl:px-20 max-w-screen-xxxl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-extrabold text-[#0732EF]">Retail & CPG Excellence</h2>
+      <div className="mt-12 md:mt-16 text-center w-full px-6 sm:px-x md:px-12 xl:px-20 max-w-screen-xxxl mx-auto">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-extrabold text-[#0732EF]">Retail & CPG Excellence</h2>
         <p className="text-base sm:text-lg text-gray-700 mt-4 sm:mt-6 leading-relaxed">
           In today’s dynamic retail landscape, businesses need a strategic, data-driven approach to stay ahead. At Ronsare, we empower retailers and brands with cutting-edge solutions that enhance consumer engagement, operational efficiency, and digital transformation.
         </p>

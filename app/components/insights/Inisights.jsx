@@ -10,7 +10,7 @@ const DigitalInsights = () => {
           {/* Left Side - Digital Insights Info */}  
           <div>  
             <div className="space-y-6">  
-              <h2 className="text-4xl font-extrabold text-blue-800">Digital Insights</h2>  
+              <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-extrabold text-blue-800">Digital Insights</h2>  
               <p className="text-gray-600">Stay ahead in the digital world with our latest insights, trends, and innovations.</p>  
               <p className="text-gray-700 font-semibold">Explore cutting-edge technologies and strategies:</p>  
               <ul className="list-disc list-inside text-gray-600 space-y-2">  

@@ -25,7 +25,7 @@ const RPOServices = () => {
       {/* Header Section */}
       <div className="relative w-full flex flex-col items-center bg-gradient-to-br from-[#0732EF] to-[#0A4BF5] py-20 px-4 sm:px-6 md:px-12 lg:px-20">
         <div className="text-center max-w-4xl">
-          <h2 className="text-4xl font-extrabold text-white sm:text-5xl">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-extrabold text-white ">
             Global RPO Services Tailored For Your Talent Needs
           </h2>
           <p className="mt-6 text-lg text-gray-200">

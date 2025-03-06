@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section className="my-20 bg-gradient-to-b from-[#f0f9ff] to-white py-16 px-6 md:px-12 lg:px-20">
       <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-[#0732EF] mb-6 drop-shadow-md">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl    font-bold text-[#0732EF] mb-6 drop-shadow-md">
           Welcome to Ronsare
         </h2>
         <p className="text-lg md:text-xl leading-relaxed text-gray-700">

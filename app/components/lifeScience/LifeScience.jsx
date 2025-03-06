@@ -40,7 +40,7 @@ const LifeSciences = () => {
     <div className="relative w-full my-20 flex flex-col items-center bg-gradient-to-b from-[#f0f9ff] to-white px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20 max-w-screen-xxxl mx-auto">
       {/* Header Section */}
       <div className="w-full py-20 px-4 sm:px-6 md:px-12 lg:px-20 text-center">
-        <h1 className="text-5xl font-extrabold text-[#0732EF] mb-6">Enabling Enterprises that Bring Sciences to Life</h1>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-extrabold text-[#0732EF] mb-6">Enabling Enterprises that Bring Sciences to Life</h1>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
           Ronsare Life Sciences helps you navigate operational, regulatory, and technological challenges with a digital-first approach, delivering value across the drug lifecycle.
         </p>

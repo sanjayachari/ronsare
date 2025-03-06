@@ -4,7 +4,7 @@ export default function ContactUs() {
       <div className="flex flex-col md:flex-row w-full rounded-lg ">
         {/* Left Side - Contact Info */}
         <div className="md:w-1/2 pr-8">
-          <h2 className="text-3xl font-bold text-[#0732EF] mb-6">Contact Us</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold text-[#0732EF] mb-6">Contact Us</h2>
           <p className="text-[#1E40AF] mb-4">
             Lets start a conversation. Ask how we can help you.
           </p>

@@ -53,8 +53,8 @@ const SupplyChain = () => {
 
       <div className="relative w-full   flex flex-col items-center px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20 max-w-screen-xxxl mx-auto">
         {/* Header Section */}
-        <div className="w-full bg-gradient-to-br py-20 px-4 sm:px-6 md:px-12 lg:px-20 text-center">
-          <h1 className="text-5xl font-extrabold text-[#0732EF] mb-6">Supply Chain & Logistics</h1>
+        <div className="w-full bg-gradient-to-br py-20 px-4 sm:px-2 md:px-12 lg:px-20 text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-extrabold text-[#0732EF] mb-6">Supply Chain & Logistics</h1>
           <p className="text-lg text-[#0732EF] max-w-3xl mx-auto leading-relaxed">
             At Ronsare, we help global enterprises create scalable and connected digital supply networks to drive resilience, agility, and predictability across the value chain.
           </p>

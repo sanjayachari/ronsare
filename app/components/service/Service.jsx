@@ -5,7 +5,7 @@ const Service = () => {
   return (
     <div className="w-full bg-[#0732EF]">
       <div className="w-full px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20 max-w-screen-xxxl mx-auto pt-10 md:pt-40 pb-10">
-        <h1 className="text-3xl sm:text-4xl xl:text-5xl font-semibold text-white my-2 md:my-4">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-semibold text-white my-2 md:my-4">
           Our Healthcare Solutions
         </h1>
         <h3 className="text-xl sm:text-xl xl:text-xl max-w-xl text-white">

@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../components/navbar/Navbar'
 import MobileNavbar from '../components/navbar/ResponsiveNav'
 import Footer from '../components/footer/Footer'
-import SupplyChain from '@/components/ui/supplyChain/SupplyChain'
+import SupplyChain from '../components/supplyChain/SupplyChain'
 
 const page = () => {
     return (

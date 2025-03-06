@@ -6,7 +6,7 @@ const TechStaffing = () => {
     <div className='bg-gray-50'>
 
     <div className="pt-20 mt-[60px] md:mt-[90px] w-full flex flex-col items-center px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20 max-w-screen-xxxl mx-auto">
-      <h1 className="text-5xl font-extrabold text-[#0732EF] text-center mb-8">Technology Staffing</h1>
+      <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-extrabold text-[#0732EF] text-center mb-8">Technology Staffing</h1>
       <p className="text-lg text-gray-700 text-center max-w-3xl leading-relaxed">
         Execute digital initiatives on-time and on-budget. At Ronsare, we transform the talent acquisition landscape, making digital transformation a reality through our IT staffing services.
       </p>

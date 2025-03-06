@@ -37,7 +37,7 @@ const Business = () => {
         ref={sectionRef}
         className="w-full px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20 max-w-screen-xxxl mx-auto md:pb-10 pt-0"
       >
-        <h1 className="text-3xl sm:text-4xl xl:text-5xl font-semibold text-white text-center">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-semibold text-white text-center">
           Boosting Businesses
         </h1>
 

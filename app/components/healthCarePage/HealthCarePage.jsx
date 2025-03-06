@@ -11,7 +11,7 @@ const HealthCarePage = () => {
 
   return (
     <div className="py-20 mt-[60px] md:mt-[90px] w-full flex flex-col items-center bg-white px-4 sm:px-6 md:px-12 xl:px-10 xxl:px-20 max-w-screen-xxxl mx-auto">
-      <h1 className="text-3xl md:text-4xl font-bold text-center text-[#0732EF] mb-6">Healthcare, Life Sciences, and Insurance</h1>
+      <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold text-center text-[#0732EF] mb-6">Healthcare, Life Sciences, and Insurance</h1>
       <p className="text-lg text-gray-700 max-w-4xl text-center mb-8">
         The last few years have witnessed unparalleled change in the healthcare industry, with organizations forced to rethink strategies, investments, and operations. Patient centricity plays a pivotal role, and key trends indicate major shifts in the industry.
       </p>
